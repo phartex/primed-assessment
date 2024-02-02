@@ -1,1 +1,62 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.tier-card {
+    @apply flex flex-col rounded-xl px-1 shadow-gray-900 transition-all duration-500 cursor-pointer hover:scale-105;
+    &.active,
+    &:hover {
+      span {
+        // @apply first:text-white last:text-white;
+      }
+    }
+    &.active,
+    &:hover {
+      @apply shadow-2xl;
+    }
+    &:first-child {
+      @apply bg-green-50 bg-green-500;
+      &.active {
+        @apply bg-green-500;
+      }
+    }
+    &:nth-child(2) {
+      @apply bg-sky-50 bg-sky-500;
+      &.active {
+        @apply bg-sky-500;
+      }
+    }
+    &:nth-child(3) {
+      @apply bg-teal-50 bg-teal-500;
+      &.active {
+        @apply bg-teal-500;
+      }
+    }
+    &:nth-child(4) {
+      @apply bg-purple-50 bg-purple-500;
+      &.active {
+        @apply bg-purple-500;
+      }
+    }
+    .info {
+      @apply bg-white text-xs mb-0.5 p-2 flex flex-col items-center;
+      @media screen and (max-width: 768px) {
+        min-height: auto;
+      }
+      // min-height: 150px;
+      p {
+        @apply break-words overflow-clip overflow-ellipsis;
+      }
+    }
+    span {
+      @apply px-2 first:font-semibold first:h-14 first:text-sm last:font-semibold last:text-sm last:py-5 first:py-4;
+      @apply last:flex last:items-center last:justify-center last:gap-2;
+    }
+  }
+
+  .custome-color{
+   background-color: red !important;
+  }

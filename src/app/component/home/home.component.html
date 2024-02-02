@@ -1,0 +1,155 @@
+<div class="mx-auto mt-10">
+    <p class="font-medium text-center text-2xl">TASK TRACKER</p>
+    <div class="tier-category grid  sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-5 py-5 mx-auto px-16 mt-5">
+        <div class="tier-card flex flex-col">
+            
+            <div> <span>
+                    <p class="text-2xl font-medium">Open</p>
+                </span>
+            </div>
+            <div class="hover:border hover:bg-white  rounded-md z-[1000] " [routerLink]="['/add-task']">
+                <p class="text-green-500 text-center rounded-md font-semibold bg-white pt-2 px-2 cursor-pointer">Add Task</p>
+            </div> 
+            <div class="bg-white rounded-md p-3 mb-3" *ngFor="let item of tasks">
+                <div class="flex">
+                    <p>Title:</p>
+                    <p class="px-3">{{item.title}}</p>
+                </div>
+                <div class="flex">
+                    <p>Description:</p>
+                    <p class="px-3">{{item.description}}</p>
+                </div>
+                <div class="flex">
+                    <p>Due Date:</p>
+                    <p class="px-3">{{item.dueDate}}</p>
+                </div>
+
+                <div class="flex justify-between">
+
+
+                
+                <div class="rounded-md bg-green-500" [routerLink]="['/edit-task']">
+                    <p class="text-white text-center rounded-md font-semibold pt-2 px-2 cursor-pointer">Edit Task</p>
+                </div>
+                <div class="rounded-md bg-green-500">
+                    <p class="text-white text-center rounded-md font-semibold pt-2 px-2 cursor-pointer" (click)="deleteTask(item.id)">Delete Task</p>
+                </div>
+
+                
+
+                </div>
+             
+            </div>
+          
+        </div>
+
+
+
+
+        <div class="tier-card flex flex-col">
+            <div> <span>
+                    <p class="text-2xl font-medium">Pending</p>
+                </span>
+            </div>
+            <div class="bg-white rounded-md p-3 mb-3" *ngFor="let item of pendingTasks">
+                <div class="flex">
+                    <p>Title:</p>
+                    <p class="px-3">{{item.title}}</p>
+                </div>
+                <div class="flex">
+                    <p>Description:</p>
+                    <p class="px-3">{{item.description}}</p>
+                </div>
+                <div class="flex">
+                    <p>Due Date:</p>
+                    <p class="px-3">{{item.dueDate}}</p>
+                </div>
+             
+            </div>
+           
+        </div>
+
+
+        <div class="tier-card flex flex-col">
+            <div> <span>
+                    <p class="text-2xl font-medium">In Progress</p>
+                </span>
+            </div>
+            <div class="bg-white rounded-md p-3 mb-3" *ngFor="let item of inProgressTasks">
+                <div class="flex">
+                    <p>Title:</p>
+                    <p class="px-3">{{item.title}}</p>
+                </div>
+                <div class="flex">
+                    <p>Description:</p>
+                    <p class="px-3">{{item.description}}</p>
+                </div>
+                <div class="flex">
+                    <p>Due Date:</p>
+                    <p class="px-3">{{item.dueDate}}</p>
+                </div>
+             
+            </div>
+           
+        </div>
+
+
+        <div class="tier-card flex flex-col">
+            <div> <span>
+                    <p class="text-2xl font-medium">Completed</p>
+                </span>
+            </div>
+            <div class="bg-white rounded-md p-3 mb-3" *ngFor="let item of completedTasks">
+                <div class="flex">
+                    <p>Title:</p>
+                    <p class="px-3">{{item.title}}</p>
+                </div>
+                <div class="flex">
+                    <p>Description:</p>
+                    <p class="px-3">{{item.description}}</p>
+                </div>
+                <div class="flex">
+                    <p>Due Date:</p>
+                    <p class="px-3">{{item.dueDate}}</p>
+                </div>
+             
+            </div>
+          
+        </div>
+       
+    </div>
+
+   
+    <!-- <div class="tier-category grid  sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 py-5 mx-auto px-24 mt-5">
+        <div *ngFor="let item of tasks; let i = index" (click)="OnContinue(item.id)" class="tier-card h-96 ">
+            <span>
+                <p class="text-2xl font-medium"> {{item.name}}</p>
+            </span>
+            <div [ngSwitch]="item.status">
+                <div class="bg-white rounded-md p-3 mb-3" *ngSwitchCase="'Open'">
+                    <div class="flex">
+                        <p>Title:</p>
+                        <p class="px-3">{{item.title}}</p>
+                    </div>
+                    <div class="flex">
+                        <p>Description:</p>
+                        <p class="px-3">{{item.description}}</p>
+                    </div>
+                    <div class="flex">
+                        <p>Due Date:</p>
+                        <p class="px-3">{{item.dueDate | date}}</p>
+                    </div>
+    
+                </div>
+            </div>
+       
+           
+
+
+
+        </div>
+
+    </div> -->
+</div>
+
+

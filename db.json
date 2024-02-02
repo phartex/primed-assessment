@@ -1,0 +1,90 @@
+{
+  "openTasks": [
+    {
+      "id": 1,
+      "title": "Complete Angular Tutorial",
+      "description": "Finish the Angular tutorial on creating a task tracker application.",
+      "dueDate": "2024-03-01",
+      "status": "open"
+    },
+    {
+      "id": 2,
+      "title": "Review Code",
+      "description": "Review and provide feedback on team members' code.",
+      "dueDate": "2024-03-05",
+      "status": "open"
+    },
+    {
+      "id": "e80e",
+      "title": "eeeuuqueueueu",
+      "description": "uwueueu",
+      "dueDate": "2021-01-02"
+    }
+  ],
+  "InProgressTasks": [
+    {
+      "id": 1,
+      "title": "Complete Angular Tutorial",
+      "description": "Finish the Angular tutorial on creating a task tracker application.",
+      "dueDate": "2024-03-01",
+      "status": "open"
+    },
+    {
+      "id": 2,
+      "title": "Review Code",
+      "description": "Review and provide feedback on team members' code.",
+      "dueDate": "2024-03-05",
+      "status": "open"
+    },
+    {
+      "id": "b370",
+      "title": "basketball",
+      "description": "learn some basket ball",
+      "dueDate": "02-05-2021"
+    }
+  ],
+  "Pending": [
+    {
+      "id": 1,
+      "title": "Complete Angular Tutorial",
+      "description": "Finish the Angular tutorial on creating a task tracker application.",
+      "dueDate": "2024-03-01",
+      "status": "open"
+    },
+    {
+      "id": 2,
+      "title": "Review Code",
+      "description": "Review and provide feedback on team members' code.",
+      "dueDate": "2024-03-05",
+      "status": "open"
+    },
+    {
+      "id": "b370",
+      "title": "basketball",
+      "description": "learn some basket ball",
+      "dueDate": "02-05-2021"
+    }
+  ],
+  "Completed": [
+    {
+      "id": 1,
+      "title": "Complete Angular Tutorial",
+      "description": "Finish the Angular tutorial on creating a task tracker application.",
+      "dueDate": "2024-03-01",
+      "status": "open"
+    },
+    {
+      "id": 2,
+      "title": "Review Code",
+      "description": "Review and provide feedback on team members' code.",
+      "dueDate": "2024-03-05",
+      "status": "open"
+    },
+    {
+      "id": "b370",
+      "title": "basketball",
+      "description": "learn some basket ball",
+      "dueDate": "02-05-2021"
+    }
+  ]
+}

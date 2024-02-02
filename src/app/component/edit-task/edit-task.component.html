@@ -1,0 +1,31 @@
+<div class="bg-gray-200 mt-4 md:mx-80 md:mt-10 px-4 py-6 shadow-lg drop-shadow-lg">
+    <div class="">
+<button [routerLink]="['/home']" class="bg-green-500 text-white py-3 px-4 rounded-md">back</button>
+    </div>
+    <p class="text-center text-2xl text-semibold">Edit Task</p>
+    <form [formGroup]="taskForm">
+        <div class="control -mb-2">
+            <mat-label class="text-sm">Title</mat-label>
+            <mat-form-field appearance="outline" class="w-full">
+                <input formControlName="title" matInput placeholder="Enter title" maxlength="50" />
+            </mat-form-field>
+        </div>
+        <div class="control -mb-2">
+            <mat-label class="text-sm">Description</mat-label>
+            <mat-form-field appearance="outline" class="w-full">
+                <input formControlName="description" matInput placeholder="Enter title" maxlength="50" />
+            </mat-form-field>
+        </div>
+        <div class="control -mb-2">
+            <mat-label class="text-sm">Due date</mat-label>
+            <mat-form-field appearance="outline" class="w-full">
+                <input formControlName="dueDate" matInput placeholder="Enter title" maxlength="50" />
+            </mat-form-field>
+        </div>
+       
+        <button class="w-full btn text-sm font-medium mt-2" type="submit" mat-flat-button color="primary"
+            [disabled]="!taskForm.valid" (click)="submitTaskForm()">
+            Submit
+        </button>
+    </form>
+</div>
